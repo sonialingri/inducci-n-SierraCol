@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inducción HES Contratistas - SierraCol Energy</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="induccion.css">
+</head>
+<body>
+
+    <!-- Menú Lateral -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo_sierracol.png" alt="SierraCol Energy" class="sidebar-logo">
+        </div>
+        <ul class="menu" id="sidebar-menu">
+            <!-- Los elementos del menú serán interactivos -->
+            <li class="menu-item active" data-slide="0"><i class="fa-solid fa-house-chimney"></i> <span>1. Bienvenida</span></li>
+            <li class="menu-item locked" data-slide="1"><i class="fa-solid fa-sitemap"></i> <span>2. HES-MS</span></li>
+            <li class="menu-item locked" data-slide="2"><i class="fa-solid fa-bullseye"></i> <span>3. Objetivos y Pilares</span></li>
+            <li class="menu-item locked" data-slide="3"><i class="fa-solid fa-handshake-angle"></i> <span>4. Política HES</span></li>
+            <li class="menu-item locked" data-slide="4"><i class="fa-solid fa-heart-pulse"></i> <span>5. Conceptos para Cuidar tu Vida</span></li>
+            <li class="menu-item locked" data-slide="5"><i class="fa-solid fa-clipboard-check"></i> <span>6. Disciplina operativa</span></li>
+            <li class="menu-item locked" data-slide="6"><i class="fa-solid fa-bullhorn"></i> <span>7. Reportes</span></li>
+            <li class="menu-item locked" data-slide="7"><i class="fa-solid fa-kit-medical"></i> <span>8. Emergencias</span></li>
+            <li class="menu-item locked" data-slide="8"><i class="fa-solid fa-leaf"></i> <span>9. Gestión Ambiental</span></li>
+            <li class="menu-item locked" data-slide="9"><i class="fa-solid fa-user-check"></i> <span>10. Responsabilidades</span></li>
+            <li class="menu-item locked" data-slide="10"><i class="fa-solid fa-graduation-cap"></i> <span>11. Evaluación Final</span></li>
+        </ul>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main">
+        <!-- Barra Superior de Progreso -->
+        <div class="topbar">
+            <div class="topbar-info">
+                <strong>Progreso de la Inducción</strong>
+                <span id="progress-text">9% completado</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress" id="progress-bar" style="width: 9%;"></div>
+            </div>
+        </div>
+
+        <!-- Área de Contenido Dinámico -->
+        <div class="content">
+            <div class="card" id="slides-container">
+
+                <!-- SLIDE 1: BIENVENIDA -->
+                <section class="slide-content active" id="slide-0">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 1</div>
+                            <h1>¡Bienvenid@!</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="welcome-container">
+                        <div class="welcome-text-col">
+                            <p>Bienvenid@ al módulo de inducción HES para contratistas de <strong>SierraCol Energy</strong>.</p>
+                            <p>En esta sesión, conocerás los principios esenciales de Salud, Seguridad y Medio Ambiente que guían nuestro trabajo diario en todas nuestras operaciones.</p>
+                            <p>Tu seguridad y bienestar son nuestra máxima prioridad; contamos contigo para mantener un entorno de trabajo seguro y saludable para todos.</p>
+                            <p>A través de este módulo interactivo, adquirirás herramientas y conocimientos clave para desempeñarte de manera responsable en nuestras operaciones.</p>
+                            
+                            <div class="highlight border-blue">
+                                <strong><i class="fa-solid fa-circle-check"></i> Compromiso HES</strong>
+                                <p style="margin-top:10px;">Gracias por unirte y por tu compromiso activo con una cultura de trabajo segura, responsable y enfocada en la protección de las personas, el ambiente y los activos.</p>
+                            </div>
+                        </div>
+                        <div class="welcome-mascot-col">
+                            <img src="mascota.png" alt="Mascota HES" class="welcome-mascot-img">
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="btn btn-primary" onclick="nextSlide()">
+                            Comenzar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 2: HES-MS (Sistema de Gestión) -->
+                <section class="slide-content" id="slide-1">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 2</div>
+                            <h1>Sistema de Gestión HES-MS</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'hesms-def-tab')">
+                            <i class="fa-solid fa-book-open"></i> ¿Qué es el HES-MS?
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'hesms-structure-tab')">
+                            <i class="fa-solid fa-circle-nodes"></i> Estructura del HES-MS
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'hesms-purpose-tab')">
+                            <i class="fa-solid fa-circle-info"></i> Propósito y Beneficios
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Definición -->
+                    <div id="hesms-def-tab" class="tab-panel active">
+                        <div class="hesms-layout">
+                            <div class="hesms-text-col">
+                                <div class="hesms-section" style="margin-bottom: 25px;">
+                                    <h3><i class="fa-solid fa-circle-question"></i> ¿Qué es el HES-MS?</h3>
+                                    <p>Es el Sistema Integrado de Gestión de SierraCol Energy. Nuestro sistema está diseñado para mejorar la eficiencia y garantizar el cumplimiento de todos los requisitos legales y reglamentarios relacionados con la salud, el medio ambiente, la seguridad y la gestión de riesgos.</p>
+                                </div>
+                                <div class="hesms-section">
+                                    <h3><i class="fa-solid fa-gears"></i> ¿En qué se basa el HES-MS?</h3>
+                                    <p>El sistema se basa en <strong>IOGP 510</strong> (Operating Management System Framework), proporciona una guía para establecer y operar sistemas de gestión eficaces en la industria del petróleo y gas; también integra normas internacionales (<strong>ISO 45001</strong> e <strong>ISO 14001</strong>) y todos los requisitos legales y reglamentarios aplicables en Colombia.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="hesms-image-col">
+                                <div class="hesms-image-card">
+                                    <img src="hesms_guia.png" alt="Guía HES-MS" class="hesms-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Estructura -->
+                    <div id="hesms-structure-tab" class="tab-panel">
+                        <div class="hesms-layout">
+                            <div class="hesms-text-col">
+                                <div class="hesms-section" style="margin-bottom: 15px;">
+                                    <h3><i class="fa-solid fa-circle-nodes"></i> Estructura del HES-MS</h3>
+                                    <p>Nuestra estructura está basada en un modelo circular centrado en el liderazgo, la gestión de riesgos, la implementación y la mejora continua, integrando <strong>10 elementos fundamentales</strong>:</p>
+                                </div>
+                                <div class="structure-list-grid">
+                                    <div class="structure-item"><strong>1.</strong> Compromiso y responsabilidades</div>
+                                    <div class="structure-item"><strong>2.</strong> Políticas, estándares y objetivos</div>
+                                    <div class="structure-item"><strong>3.</strong> Organización, recursos y capacidad</div>
+                                    <div class="structure-item"><strong>4.</strong> Grupos de interés y clientes</div>
+                                    <div class="structure-item"><strong>5.</strong> Evaluación y control del riesgo</div>
+                                    <div class="structure-item"><strong>6.</strong> Diseño e integridad de activos</div>
+                                    <div class="structure-item"><strong>7.</strong> Planes y procedimientos</div>
+                                    <div class="structure-item"><strong>8.</strong> Ejecución de actividades</div>
+                                    <div class="structure-item"><strong>9.</strong> Seguimiento, reporte y aprendizaje</div>
+                                    <div class="structure-item"><strong>10.</strong> Aseguramiento, revisión y mejora</div>
+                                </div>
+                            </div>
+                            
+                            <div class="hesms-image-col">
+                                <div class="hesms-image-card">
+                                    <img src="estructura_hesms.png" alt="Estructura HES-MS SierraCol" class="hesms-img" style="max-height: 420px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Propósito y Beneficios -->
+                    <div id="hesms-purpose-tab" class="tab-panel">
+                        <div class="purpose-benefits-container">
+                            <div class="purpose-card">
+                                <div class="purpose-header">
+                                    <div class="purpose-icon-circle"><i class="fa-solid fa-crosshairs"></i></div>
+                                    <h3>Propósito del HES-MS</h3>
+                                </div>
+                                <p>Establecer un sistema de gestión sólido y colaborativo que garantice la seguridad, la responsabilidad ambiental y la excelencia operativa.</p>
+                            </div>
+                            
+                            <div class="benefits-section">
+                                <div class="benefits-header">
+                                    <div class="benefits-icon-circle"><i class="fa-solid fa-circle-check"></i></div>
+                                    <h3>Beneficios del HES-MS</h3>
+                                </div>
+                                
+                                <div class="benefits-grid">
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-paste"><i class="fa-solid fa-file-shield"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Procesos y procedimientos eficientes, actualizados y divulgados</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-recycle"><i class="fa-solid fa-arrows-spin"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Racionaliza esfuerzos y recursos</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-risk"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Adecuada gestión de riesgos</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-efficiency"><i class="fa-solid fa-chart-line"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Eficiencia operativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-legal"><i class="fa-solid fa-gavel"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Cumplimiento legal</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-safety"><i class="fa-solid fa-helmet-safety"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Ambiente de trabajo seguro</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-integration"><i class="fa-solid fa-network-wired"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Integración de sistemas de gestión</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-reduction"><i class="fa-solid fa-shield-heart"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Reducción de accidentes laborales</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-mitigation"><i class="fa-solid fa-leaf"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Mitigación de impactos ambientales</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon-wrapper font-transparency"><i class="fa-solid fa-users-viewfinder"></i></div>
+                                        <div class="benefit-content">
+                                            <p>Mayor transparencia y colaboración</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 3: OBJETIVOS Y PILARES HES -->
+                <section class="slide-content" id="slide-2">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 3</div>
+                            <h1>Objetivos y Pilares HES</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'objectives-tab')">
+                            <i class="fa-solid fa-bullseye"></i> Nuestros Objetivos
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'pillars-tab')">
+                            <i class="fa-solid fa-gem"></i> Nuestros Pilares
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Objetivos -->
+                    <div id="objectives-tab" class="tab-panel active">
+                        <div class="objectives-title-bar">
+                            <div class="objectives-title-icon">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h2>Nuestros objetivos</h2>
+                        </div>
+                        
+                        <div class="objectives-grid">
+                            <!-- Columna Izquierda: Seguridad Industrial -->
+                            <div class="objectives-left-col">
+                                <div class="objective-item">
+                                    Desempeñarnos consistentemente como la mejor empresa de Oil & Gas, con operaciones libres de incidentes
+                                </div>
+                                <div class="objective-item">
+                                    Contar con equipos de trabajo altamente competentes en seguridad y Salud en el Trabajo
+                                </div>
+                                <div class="objective-item">
+                                    Mejorar la articulación de las estrategias HS y Responsabilidad Social
+                                </div>
+                                <div class="objective-item">
+                                    Mantener nuestro HESMS permanentemente alineado con normas internacionales
+                                </div>
+                            </div>
+                            
+                            <!-- Columna Central: Imagen Circular -->
+                            <div class="objectives-center-col">
+                                <img src="objetivos_pilares.png" alt="Objetivos y Pilares HES SierraCol" class="objectives-circle-img">
+                            </div>
+                            
+                            <!-- Columna Derecha: Gestión Ambiental -->
+                            <div class="objectives-right-col">
+                                <div class="objective-item environmental">
+                                    Ganar Confianza en el Manejo Ambiental de los Grupos de Interés
+                                </div>
+                                <div class="objective-item environmental">
+                                    Garantizar la Viabilidad y sostenibilidad ambiental en los tiempos requeridos por el negocio
+                                </div>
+                                <div class="objective-item environmental">
+                                    Mantener la excelencia y ser reconocidos por la gestión ambiental
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Eslogan -->
+                        <div class="slogan-container">
+                            <div class="slogan-top">Nos une</div>
+                            <div class="slogan-bottom">la vida</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Pilares -->
+                    <div id="pillars-tab" class="tab-panel">
+                        <div class="pillars-grid">
+                            <div class="pillar-graphic-card">
+                                <h3>Seguridad y Salud en el Trabajo</h3>
+                                <div class="pillar-image-wrapper">
+                                    <img src="pilares_sst.png" alt="Pilares Seguridad y Salud en el Trabajo" class="pillar-img">
+                                </div>
+                            </div>
+                            <div class="pillar-graphic-card">
+                                <h3>Gestión Ambiental</h3>
+                                <div class="pillar-image-wrapper">
+                                    <img src="pilares_ambiental.png" alt="Pilares de la Gestión Ambiental" class="pillar-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 4: POLÍTICA HES -->
+                <section class="slide-content" id="slide-3">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 4</div>
+                            <h1>Política HES y Autoridad de Parada</h1>
+                        </div>
+                    </div>
+                    <p>Nuestra Política HES ratifica que ninguna meta de producción o urgencia operativa está por encima de la salud y la seguridad de las personas o de la protección del medio ambiente.</p>
+                    <p>Todos los contratistas deben cumplir rigurosamente con los estándares y lineamientos definidos por la compañía.</p>
+                    
+                    <div class="stop-work-authority-card">
+                        <div class="swa-header">
+                            <i class="fa-solid fa-circle-stop"></i>
+                            <div>
+                                <h2>AUTORIDAD DE PARADA (SWA)</h2>
+                                <span>Stop Work Authority</span>
+                            </div>
+                        </div>
+                        <p class="swa-body">Tienes el <strong>derecho, deber y la responsabilidad</strong> de detener de inmediato cualquier tarea o proceso si consideras que las condiciones de seguridad no están dadas o representan un peligro inminente para ti o tus compañeros.</p>
+                        <div class="swa-footer">
+                            <i class="fa-solid fa-shield-halved"></i> <strong>SierraCol Energy respalda 100% tu decisión. No habrá ninguna represalia por ejercer esta autoridad.</strong>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 5: CONCEPTOS PARA CUIDAR TU VIDA -->
+                <section class="slide-content" id="slide-4">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 5</div>
+                            <h1>Conceptos para Cuidar tu Vida</h1>
+                        </div>
+                    </div>
+                    <p>Haz clic en cada uno de los conceptos clave para conocer sus definiciones, ejemplos y controles asociados:</p>
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'concept-peligro-tab')">
+                            <i class="fa-solid fa-triangle-exclamation text-red"></i> 1. Peligro
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'concept-riesgo-tab')">
+                            <i class="fa-solid fa-bolt text-yellow"></i> 2. Riesgo
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'concept-linea-tab')">
+                            <i class="fa-solid fa-arrows-to-circle text-orange"></i> 3. Línea de peligro
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'concept-condicion-tab')">
+                            <i class="fa-solid fa-screwdriver-wrench text-gray"></i> 4. Condición insegura
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'concept-acto-tab')">
+                            <i class="fa-solid fa-user-xmark text-brown"></i> 5. Acto inseguro
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'concept-incidente-tab')">
+                            <i class="fa-solid fa-magnifying-glass-chart text-sky"></i> 6. Incidente
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'concept-accidente-tab')">
+                            <i class="fa-solid fa-kit-medical text-red-dark"></i> 7. Accidente
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'concept-enfermedad-tab')">
+                            <i class="fa-solid fa-hospital-user text-teal"></i> 8. Enfermedad laboral
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Peligro -->
+                    <div id="concept-peligro-tab" class="tab-panel active">
+                        <div class="concept-detail-wrapper">
+                            <div class="concept-definition-box">
+                                <p><strong>Definición:</strong> Cualquier fuente, situación o acto con el potencial de causar daño a la salud de los trabajadores, a los equipos o las instalaciones. El peligro se compone de los siguientes elementos:</p>
+                            </div>
+                            
+                            <h4 class="concept-sub-title">Elementos del Peligro:</h4>
+                            <div class="danger-elements-grid">
+                                <div class="danger-element-card">
+                                    <div class="element-header">
+                                        <i class="fa-solid fa-plug-circle-bolt"></i> <strong>Fuente</strong>
+                                    </div>
+                                    <p>Elemento o condición con energía propia (ejemplo: maquinaria, electricidad, ruido, sustancias químicas, etc.).</p>
+                                </div>
+                                <div class="danger-element-card">
+                                    <div class="element-header">
+                                        <i class="fa-solid fa-cloud-showers-water"></i> <strong>Situación</strong>
+                                    </div>
+                                    <p>Entorno o circunstancia que propicia un accidente (ejemplo: pisos resbaladizos, lluvia, etc.).</p>
+                                </div>
+                                <div class="danger-element-card">
+                                    <div class="element-header">
+                                        <i class="fa-solid fa-user-xmark"></i> <strong>Acto</strong>
+                                    </div>
+                                    <p>Comportamiento inseguro del trabajador (ejemplo: usar el celular mientras conduce, no usar elementos de protección personal, etc.).</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="concept-sub-title bg-blue-title">¿A qué peligros estamos expuestos en las instalaciones administrativas de SierraCol Energy?</h4>
+                            <div class="admin-hazards-grid">
+                                <div class="hazard-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-volume-high"></i> FÍSICOS</div>
+                                    <p>Ruido, iluminación.</p>
+                                </div>
+                                <div class="hazard-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-virus"></i> BIOLÓGICOS</div>
+                                    <p>Virus y bacterias.</p>
+                                </div>
+                                <div class="hazard-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-chair"></i> BIOMECÁNICOS</div>
+                                    <p>Posturas inadecuadas, movimientos repetitivos, levantamiento incorrecto de cargas, posturas forzadas.</p>
+                                </div>
+                                <div class="hazard-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-brain"></i> PSICOSOCIALES</div>
+                                    <p>Jornada laboral, carga excesiva de trabajo, fatiga, mala organización del tiempo, acoso laboral.</p>
+                                </div>
+                                <div class="hazard-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-gear"></i> MECÁNICO</div>
+                                    <p>Uso incorrecto de herramientas o equipos, herramientas o equipos defectuosos.</p>
+                                </div>
+                                <div class="hazard-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-stairs"></i> LOCATIVOS</div>
+                                    <p>Piso húmedo, falta de orden y aseo, escaleras, desniveles.</p>
+                                </div>
+                            </div>
+
+                            <h4 class="concept-sub-title bg-green-title">🛡️ Controles para los peligros (Torre Once 93)</h4>
+                            <p style="font-size: 14.5px; color: #475569; margin-bottom: 15px;">
+                                Los controles son medidas que se utilizan para eliminar, sustituir o disminuir el nivel del peligro. Para los peligros a los cuales estamos expuestos en la <strong>Torre Once 93</strong>, podemos aplicar estos controles:
+                            </p>
+                            
+                            <div class="controls-hazards-grid">
+                                <div class="control-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-volume-high"></i> FÍSICOS</div>
+                                    <ul>
+                                        <li><strong>Ruido:</strong> Limitar el uso de audífonos.</li>
+                                        <li><strong>Iluminación:</strong> Verificar que el nivel de iluminación de tu puesto de trabajo sea adecuado (ni excesivo ni deficiente).</li>
+                                    </ul>
+                                </div>
+                                <div class="control-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-virus"></i> BIOLÓGICOS</div>
+                                    <ul>
+                                        <li><strong>Virus y bacterias:</strong> Lavarse las manos continuamente y utilizar tapabocas en la oficina si tú o tus familiares tienen síntomas de gripe.</li>
+                                    </ul>
+                                </div>
+                                <div class="control-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-chair"></i> BIOMECÁNICOS</div>
+                                    <ul>
+                                        <li><strong>Postura prolongada y movimientos repetitivos:</strong> Realiza pausas activas por lo menos 2 veces al día. Recuerda participar en las pausas activas programadas por SierraCol Energy.</li>
+                                        <li><strong>Levantamiento incorrecto de cargas:</strong> Recuerda levantar las cargas doblando las rodillas, haciendo la fuerza con las piernas y manteniendo la espalda recta.</li>
+                                        <li><strong>Posturas forzadas:</strong> Limita el tiempo de las posturas forzadas. Por ejemplo, si debes realizar una actividad que implica mantener los brazos levantados por encima de la línea de los hombros, debes hacerlo máximo por 2 horas.</li>
+                                    </ul>
+                                </div>
+                                <div class="control-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-brain"></i> PSICOSOCIALES</div>
+                                    <ul>
+                                        <li><strong>Carga de trabajo y mala organización del tiempo:</strong> Prioriza tus actividades y utiliza herramientas como Copilot para agilizar tus actividades.</li>
+                                        <li><strong>Fatiga:</strong> Realiza pausas activas mentales.</li>
+                                        <li><strong>Acoso laboral:</strong> Puedes acudir al comité de convivencia laboral o al área de PCM para que te orienten.</li>
+                                    </ul>
+                                </div>
+                                <div class="control-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-gear"></i> MECÁNICO</div>
+                                    <ul>
+                                        <li><strong>Herramientas defectuosas:</strong> Evita utilizar herramientas en mal estado y notifica a tu empresa.</li>
+                                        <li><strong>Uso incorrecto de herramientas:</strong> Usa las herramientas solo para lo que están diseñadas.</li>
+                                        <li><strong>Elementos de protección:</strong> Usa elementos de protección personal.</li>
+                                    </ul>
+                                </div>
+                                <div class="control-cat-card">
+                                    <div class="cat-header"><i class="fa-solid fa-stairs"></i> LOCATIVOS</div>
+                                    <ul>
+                                        <li><strong>Piso húmedo:</strong> Respeta la señalización de piso húmedo y transita con cuidado. Si ves un piso húmedo sin señalizar, informa al área HES.</li>
+                                        <li><strong>Falta de orden y aseo:</strong> Evita obstruir pasillos, escaleras o equipos de emergencia, mantén tu puesto de trabajo en orden, desciende/asciende por las escaleras utilizando el pasamanos y no mires el celular mientras estás caminando.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Riesgo -->
+                    <div id="concept-riesgo-tab" class="tab-panel">
+                        <div class="concept-detail-wrapper">
+                            <p style="font-size: 15px; color: #475569; margin: 0 0 10px 0;">Ahora que ya conoces el concepto de peligro, vamos a conocer el concepto de riesgo: ⚡</p>
+                            
+                            <div class="concept-definition-box">
+                                <p><strong>Definición:</strong> El riesgo es la probabilidad de que el peligro se materialice y cause una lesión, junto con la gravedad de esta.</p>
+                                <div class="example-box" style="margin-top: 10px; font-style: italic; color: #475569; font-size: 14px;">
+                                    <i class="fa-solid fa-person-falling"></i> <strong>Ejemplo:</strong> Caerse y fracturarse por causa de un piso mojado.
+                                </div>
+                            </div>
+
+                            <div class="highlight border-blue" style="margin: 15px 0;">
+                                <strong><i class="fa-solid fa-shield-halved"></i> Controlar para prevenir</strong>
+                                <p style="margin-top: 8px; font-size: 14.5px;">Al aplicar controles sobre el peligro, estamos <strong>disminuyendo el RIESGO</strong> de que ocurra un accidente. 🛡️</p>
+                            </div>
+
+                            <div class="highlight border-red" style="margin: 15px 0 0 0;">
+                                <strong><i class="fa-solid fa-people-group"></i> Compromiso HES Colectivo</strong>
+                                <p style="margin-top: 8px; font-size: 14.5px;">¡Es deber de todos en la empresa aportar para que el riesgo disminuya y así el peligro no se materialice generando un casi accidente, o en el peor de los casos, un accidente! 🚨</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Línea de peligro -->
+                    <div id="concept-linea-tab" class="tab-panel">
+                        <div class="concept-detail-wrapper">
+                            <div class="concept-definition-box">
+                                <p><strong>Definición:</strong> Zona o trayectoria física donde una persona se expone a sufrir lesiones debido a la liberación de energía, movimiento de equipos o caída de objetos.</p>
+                            </div>
+                            <p class="placeholder-concept-text"><em>Ejemplo: Ubicarse debajo de una carga suspendida por una grúa o detrás de un vehículo en reversa.</em></p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Condición insegura -->
+                    <div id="concept-condicion-tab" class="tab-panel">
+                        <div class="concept-detail-wrapper">
+                            <p style="font-size: 15px; color: #475569; margin: 0 0 10px 0;">Como lo veíamos en el concepto de peligro, este tiene 3 elementos que lo componen: fuente, situación o acto. En el caso de la <strong>Situación</strong>, nos encontramos con las <strong>CONDICIONES INSEGURAS</strong>. 🛠️</p>
+                            
+                            <div class="concept-definition-box">
+                                <p><strong>¿Qué es una condición insegura?</strong><br>Una condición insegura es cualquier situación o estado físico, material o ambiental en el lugar de trabajo que representa un peligro latente. Estas deficiencias pueden desencadenar un accidente, una enfermedad laboral o daños materiales si no se corrigen. ⚠️</p>
+                            </div>
+                            
+                            <h4 class="concept-sub-title">EJEMPLOS DE CONDICIONES INSEGURAS:</h4>
+                            <div class="unsafe-conditions-grid">
+                                <div class="unsafe-condition-card">
+                                    <div class="condition-header">
+                                        <i class="fa-solid fa-building"></i> <strong>Infraestructura y entorno</strong>
+                                    </div>
+                                    <p>Pisos resbaladizos, escaleras sin pasamanos. 🛗</p>
+                                </div>
+                                <div class="unsafe-condition-card">
+                                    <div class="condition-header">
+                                        <i class="fa-solid fa-plug"></i> <strong>Equipos e instalaciones</strong>
+                                    </div>
+                                    <p>Iluminación deficiente o falta de ventilación, cables eléctricos expuestos o herramientas en mal estado. 🔌</p>
+                                </div>
+                                <div class="unsafe-condition-card">
+                                    <div class="condition-header">
+                                        <i class="fa-solid fa-broom"></i> <strong>Orden y limpieza</strong>
+                                    </div>
+                                    <p>Pasillos obstruidos, acumulación de desechos o almacenamiento incorrecto de sustancias químicas. 🧪</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight border-red" style="margin: 20px 0 0 0;">
+                                <strong><i class="fa-solid fa-circle-exclamation"></i> ¿QUÉ DEBO HACER SI IDENTIFICO UNA CONDICIÓN INSEGURA?</strong>
+                                <ul style="margin-top: 10px; padding-left: 20px; font-size: 14.5px; line-height: 1.6; color: #334155;">
+                                    <li>📢 <strong>Notificar inmediatamente al área HSE</strong> o a tu supervisor a cargo.</li>
+                                    <li>✔️ <strong>Si está dentro de tus posibilidades y cuentas con la capacitación necesaria</strong>, elimina el peligro (ejemplo: señalizar una zona húmeda, almacenar correctamente las sustancias químicas de acuerdo a su compatibilidad).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Acto inseguro -->
+                    <div id="concept-acto-tab" class="tab-panel">
+                        <div class="concept-detail-wrapper">
+                            <p style="font-size: 15px; color: #475569; margin: 0 0 10px 0;">En el caso de la parte de Acto, nos encontramos con los <strong>ACTOS INSEGUROS</strong>: 🚫</p>
+                            
+                            <div class="concept-definition-box">
+                                <p><strong>¿Qué es un acto inseguro?</strong><br>Un acto inseguro es toda acción o decisión humana que incumple normas o procedimientos, aumentando la probabilidad de sufrir un accidente laboral o una enfermedad. Suele originarse por exceso de confianza, afán de ahorrar tiempo o falta de capacitación. ⚠️</p>
+                            </div>
+                            
+                            <h4 class="concept-sub-title">Ejemplos de actos inseguros:</h4>
+                            <div class="unsafe-acts-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 10px;">
+                                <div class="unsafe-act-card" style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 15px; display: flex; align-items: flex-start; gap: 10px;">
+                                    <i class="fa-solid fa-helmet-safety" style="color: rgb(115, 0, 0); font-size: 20px; margin-top: 2px;"></i>
+                                    <p style="font-size: 13.5px; line-height: 1.4; color: #475569; margin: 0;">No usar el equipo de protección personal (EPP) adecuado.</p>
+                                </div>
+                                <div class="unsafe-act-card" style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 15px; display: flex; align-items: flex-start; gap: 10px;">
+                                    <i class="fa-solid fa-gauge-high" style="color: rgb(115, 0, 0); font-size: 20px; margin-top: 2px;"></i>
+                                    <p style="font-size: 13.5px; line-height: 1.4; color: #475569; margin: 0;">Operar maquinaria o vehículos sin autorización o a velocidades inadecuadas.</p>
+                                </div>
+                                <div class="unsafe-act-card" style="background: #f8fafc; border: 1px solid #edf2f7; border-radius: 10px; padding: 15px; display: flex; align-items: flex-start; gap: 10px;">
+                                    <i class="fa-solid fa-door-closed" style="color: rgb(115, 0, 0); font-size: 20px; margin-top: 2px;"></i>
+                                    <p style="font-size: 13.5px; line-height: 1.4; color: #475569; margin: 0;">Bloquear pasillos o salidas de emergencia.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight border-blue" style="margin: 20px 0 15px 0;">
+                                <strong><i class="fa-solid fa-circle-info"></i> ¿QUÉ DEBO HACER PARA EVITAR LOS ACTOS INSEGUROS?</strong>
+                                <p style="margin-top: 8px; font-size: 14px; line-height: 1.6; color: #334155;">
+                                    Para evitar que realices actos inseguros durante tu trabajo, te recomendamos analizar cada una de las actividades que realizas, qué peligros implican y qué controles puedes aplicar para los peligros. Al tener consciencia de qué controles debes aplicar, es muy probable que no realices actos inseguros. 
+                                    <br><br>
+                                    ✋ <strong>Detener la actividad:</strong> Si en algún momento de tus actividades laborales consideras que las estás realizando de forma insegura, te invitamos a detener la actividad, a verificar qué controles estás aplicando e iniciar nuevamente la actividad aplicando todos los controles necesarios.
+                                    <br><br>
+                                    🤝 <strong>Intervención respetuosa:</strong> En caso de ver a un compañero de trabajo realizando un acto inseguro, te invitamos a acercarte a él y de forma respetuosa mencionarle que está realizando la actividad de forma insegura y qué controles puede aplicar. En caso de que el compañero haga caso omiso a tus recomendaciones, te invitamos a hacer el reporte ante el área HES.
+                                </p>
+                            </div>
+
+                            <div class="highlight border-red" style="margin: 0;">
+                                <strong><i class="fa-solid fa-heart"></i> RECUERDA</strong>
+                                <p style="margin-top: 8px; font-size: 14px; line-height: 1.6; color: #334155;">
+                                    Al reportar que tu compañero está realizando actos inseguros, estás ayudando a salvaguardar su salud y su vida. Es preferible reportar y evitar que el compañero tenga un accidente, a mantenernos callados y posteriormente ver las consecuencias de este acto inseguro.
+                                    <br><br>
+                                    También recuerda que si tu compañero te reporta, no lo hace con el objetivo de hacerte daño o molestarte, lo hace con el objetivo de salvaguardar tu vida. ❤️
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 6: Incidente -->
+                    <div id="concept-incidente-tab" class="tab-panel">
+                        <div class="concept-detail-wrapper">
+                            <div class="concept-definition-box">
+                                <p><strong>Definición:</strong> Evento repentino en el trabajo que tuvo el potencial de causar lesiones, pero que no resultó en daños o heridas corporales (casi-accidente).</p>
+                            </div>
+                            <p class="placeholder-concept-text"><em>Ejemplo: Resbalar en un piso húmedo pero lograr sostenerse sin caer y sin sufrir ninguna lesión.</em></p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 7: Accidente -->
+                    <div id="concept-accidente-tab" class="tab-panel">
+                        <div class="concept-detail-wrapper">
+                            <div class="concept-definition-box">
+                                <p><strong>Definición:</strong> Suceso repentino por causa o con ocasión del trabajo, que produce en el trabajador una lesión orgánica, perturbación funcional, invalidez o muerte.</p>
+                            </div>
+                            <p class="placeholder-concept-text"><em>Ejemplo: Sufrir una fractura al caer de una escalera por falta de pasamanos o por pisar una superficie húmeda.</em></p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 8: Enfermedad laboral -->
+                    <div id="concept-enfermedad-tab" class="tab-panel">
+                        <div class="concept-detail-wrapper">
+                            <div class="concept-definition-box">
+                                <p><strong>Definición:</strong> Estado patológico contraído como resultado directo de la exposición a factores de riesgo inherentes a la actividad laboral o del medio en el que se trabaja.</p>
+                            </div>
+                            <p class="placeholder-concept-text"><em>Ejemplo: Contraer túnel carpiano debido al uso repetitivo y prolongado del mouse sin pausas activas ni soporte ergonómico.</em></p>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 6: DISCIPLINA OPERATIVA -->
+                <section class="slide-content" id="slide-5">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 6</div>
+                            <h1>Disciplina Operativa</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="discipline-intro">
+                        <p>
+                            El programa de disciplina operativa de <strong>SierraCol Energy</strong> está enfocado en tener altos estándares de desempeño, mediante el cumplimiento estricto de procedimientos y asegurando que todas las actividades se realicen consistentemente, de forma segura y eficiente, con el fin de eliminar las lesiones y los incidentes de proceso. 🛡️
+                        </p>
+                    </div>
+
+                    <h3 style="font-size: 18px; color: rgb(30, 60, 150); margin-bottom: 15px; font-family: 'Outfit', sans-serif; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-list-check"></i> Objetivos del programa de disciplina operativa
+                    </h3>
+                    
+                    <div class="discipline-grid">
+                        <div class="discipline-card">
+                            <div class="num-badge">1</div>
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <span>Cumplir procedimientos y estándares</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">2</div>
+                            <i class="fa-solid fa-ban"></i>
+                            <span>Cero tolerancia a las desviaciones</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">3</div>
+                            <i class="fa-solid fa-sliders"></i>
+                            <span>Planificar y priorizar recursos</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">4</div>
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Asegurar supervisión continua</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">5</div>
+                            <i class="fa-solid fa-magnifying-glass-shield"></i>
+                            <span>Realizar análisis de trabajo seguro (ART)</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">6</div>
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Mejorar competencias continuamente</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">7</div>
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <span>Verificar capacitación de todos</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">8</div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Gestionar y cerrar acciones de incidentes</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">9</div>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            <span>Cumplir con el programa de autorizado para salvar vidas</span>
+                        </div>
+                        <div class="discipline-card">
+                            <div class="num-badge">10</div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>Ser ejemplo de disciplina operativa</span>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 7: REPORTES -->
+                <section class="slide-content" id="slide-6">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 7</div>
+                            <h1>Reportes</h1>
+                        </div>
+                    </div>
+
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'reporting-channels-tab')">
+                            <i class="fa-solid fa-file-signature"></i> Reporte de Eventos
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'accident-flow-tab')">
+                            <i class="fa-solid fa-kit-medical"></i> Accidentes de Trabajo
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'emergency-report-tab')">
+                            <i class="fa-solid fa-phone-volume"></i> Reportes de Emergencias
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Reporte de Eventos -->
+                    <div id="reporting-channels-tab" class="tab-panel active">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            Ahora que conoces los conceptos de acto inseguro, condición insegura y casi-accidente, te invitamos a reportar estos eventos a través de nuestro código QR o a través de Nuestro Espacio en el link <strong>Reporte Aquí</strong>. 📝
+                        </p>
+                        
+                        <div class="reporting-channels-container">
+                            <div class="reporting-channel-card qr-card">
+                                <h3><i class="fa-solid fa-qrcode"></i> Reportar por Código QR</h3>
+                                <p>Escanea el código QR con la cámara de tu celular para acceder directamente al formulario de registro HES de SierraCol Energy desde tu dispositivo móvil.</p>
+                                <img src="reporte_qr.png" alt="Código QR de Reporte HES" style="width: 270px;">
+                            </div>
+                            <div class="reporting-channel-card sharepoint-card">
+                                <h3><i class="fa-solid fa-globe"></i> Reportar por Nuestro Espacio</h3>
+                                <p>Ingresa al portal corporativo <strong>Nuestro Espacio</strong> (Intranet) y, en la sección de <strong>Enlaces rápidos</strong>, haz clic en el enlace <strong>"Reporte aquí Observaciones de Comportamiento, Condiciones..."</strong>.</p>
+                                <img src="nuestro_espacio_sharepoint.png" alt="Portal Nuestro Espacio SharePoint" style="width: 100%; object-fit: contain;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Accidentes de Trabajo (Diagrama de Flujo) -->
+                    <div id="accident-flow-tab" class="tab-panel">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            En caso de que tú o un compañero hayan presentado un accidente de trabajo o una emergencia médica, debes seguir de forma estricta los siguientes pasos: 🚑
+                        </p>
+                        
+                        <div class="flowchart-container">
+                            <!-- Paso 1 -->
+                            <div class="flowchart-step">
+                                <div class="step-badge">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+                                <div class="step-card">
+                                    <h4>Paso 1: Notificar al Brigadista</h4>
+                                    <p>Reporta al brigadista de tu piso inmediatamente sobre el accidente ocurrido.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Paso 2 -->
+                            <div class="flowchart-step">
+                                <div class="step-badge">
+                                    <i class="fa-solid fa-hospital-user"></i>
+                                </div>
+                                <div class="step-card">
+                                    <h4>Paso 2: Traslado al Consultorio</h4>
+                                    <p>Dirígete hacia el consultorio médico ubicado en el <strong>piso 4</strong>. Si es necesario, solicita ayuda al brigadista para trasladarte o trasladar a tu compañero hasta este punto.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Paso 3 -->
+                            <div class="flowchart-step">
+                                <div class="step-badge">
+                                    <i class="fa-solid fa-stethoscope"></i>
+                                </div>
+                                <div class="step-card">
+                                    <h4>Paso 3: Valoración Médica</h4>
+                                    <p>En el consultorio médico se realizará una valoración del evento y se determinará si es necesario realizar traslado a un centro médico especializado. Permite que el profesional médico realice la valoración necesaria.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Paso 4 -->
+                            <div class="flowchart-step">
+                                <div class="step-badge">
+                                    <i class="fa-solid fa-truck-medical"></i>
+                                </div>
+                                <div class="step-card">
+                                    <h4>Paso 4: Traslado de Emergencia</h4>
+                                    <p>En caso de ser necesario el traslado a un centro médico, se utilizará el convenio de área protegida con <strong>Coomeva</strong>. Permite que se realice el traslado a través de este medio.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Paso 5 -->
+                            <div class="flowchart-step">
+                                <div class="step-badge">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div class="step-card">
+                                    <h4>Paso 5: Desfibrilador Automático (DEA)</h4>
+                                    <p>En caso de ser necesario, la brigada de emergencias y el personal médico procederán a utilizar el desfibrilador electrónico automático (DEA) para atender la emergencia vital.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Paso 6 -->
+                            <div class="flowchart-step">
+                                <div class="step-badge">
+                                    <i class="fa-solid fa-file-invoice"></i>
+                                </div>
+                                <div class="step-card">
+                                    <h4>Paso 6: Reporte a ARL</h4>
+                                    <p>Finalmente, en caso de accidente de trabajo, reporta a tu empresa contratista para que este evento sea formalizado y reportado formalmente ante la ARL.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Reportes de Emergencias -->
+                    <div id="emergency-report-tab" class="tab-panel">
+                        <div class="emergency-report-layout">
+                            <div class="emergency-protocol-card">
+                                <div class="protocol-icon-wrapper">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div class="protocol-text">
+                                    <h4>Protocolo de Emergencias en Bogotá</h4>
+                                    <p>Para reporte de emergencias en Bogotá, dirígete al <strong>brigadista asignado</strong> en tu piso. En caso de que no se encuentre, comunícate con el <strong>Command Center</strong>. Una vez se reciba el reporte de la emergencia, el Command Center activará los grupos y equipos necesarios para afrontar la emergencia.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="interactive-directory-container">
+                                <h3 class="directory-title"><i class="fa-solid fa-address-book"></i> Directorio Telefónico de Emergencias</h3>
+                                <div class="emergency-contacts-list">
+                                    <!-- Contact 1 -->
+                                    <div class="emergency-contact-item main-emergency">
+                                        <div class="contact-header">
+                                            <span class="contact-badge red-badge">Principal</span>
+                                            <h4>Línea de atención de emergencias – Command Center</h4>
+                                        </div>
+                                        <div class="contact-details">
+                                            <div class="detail-row">
+                                                <span class="label">Teams:</span>
+                                                <span class="value teams-highlight"><i class="fa-brands fa-microsoft-teams"></i> 888 teams</span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Conmutador:</span>
+                                                <span class="value">
+                                                    <a href="tel:+576013454155" class="phone-link"><i class="fa-solid fa-phone"></i> +57 (601) 3454155</a> 
+                                                    <span class="ext">Ext. 8453 - 8188</span>
+                                                </span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Radio:</span>
+                                                <span class="value radio-highlight"><i class="fa-solid fa-walkie-talkie"></i> Canal 1, Canal 3</span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Celular/Otro:</span>
+                                                <span class="value">
+                                                    <a href="tel:+573152083952" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (315) 2083952</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact 2 -->
+                                    <div class="emergency-contact-item">
+                                        <div class="contact-header">
+                                            <h4>Líder Médico</h4>
+                                        </div>
+                                        <div class="contact-details">
+                                            <div class="detail-row">
+                                                <span class="label">Conmutador:</span>
+                                                <span class="value">
+                                                    <a href="tel:+576013454155" class="phone-link"><i class="fa-solid fa-phone"></i> +57 (601) 3454155</a> 
+                                                    <span class="ext">Ext. 8056</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact 3 -->
+                                    <div class="emergency-contact-item">
+                                        <div class="contact-header">
+                                            <h4>Coordinador HES</h4>
+                                        </div>
+                                        <div class="contact-details">
+                                            <div class="detail-row">
+                                                <span class="label">Conmutador:</span>
+                                                <span class="value">
+                                                    <a href="tel:+576013454155" class="phone-link"><i class="fa-solid fa-phone"></i> +57 (601) 3454155</a> 
+                                                    <span class="ext">Ext. 8070 - 8060</span>
+                                                </span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Radio:</span>
+                                                <span class="value"><i class="fa-solid fa-walkie-talkie"></i> Canal 3</span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Celulares:</span>
+                                                <span class="value">
+                                                    <a href="tel:+573043831947" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (304) 3831947</a>, 
+                                                    <a href="tel:+573043804733" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (304) 3804733</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact 4 -->
+                                    <div class="emergency-contact-item">
+                                        <div class="contact-header">
+                                            <h4>Líder Brigada de Emergencias</h4>
+                                        </div>
+                                        <div class="contact-details">
+                                            <div class="detail-row">
+                                                <span class="label">Conmutador:</span>
+                                                <span class="value">
+                                                    <a href="tel:+576013454155" class="phone-link"><i class="fa-solid fa-phone"></i> +57 (601) 3454155</a> 
+                                                    <span class="ext">Ext. 8442</span>
+                                                </span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Radio:</span>
+                                                <span class="value"><i class="fa-solid fa-walkie-talkie"></i> Canal 3</span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Celular:</span>
+                                                <span class="value">
+                                                    <a href="tel:+573153747130" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (315) 3747130</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact 5 -->
+                                    <div class="emergency-contact-item">
+                                        <div class="contact-header">
+                                            <h4>Coordinador Operativo de Mantenimiento</h4>
+                                        </div>
+                                        <div class="contact-details">
+                                            <div class="detail-row">
+                                                <span class="label">Conmutador:</span>
+                                                <span class="value">
+                                                    <a href="tel:+576013454155" class="phone-link"><i class="fa-solid fa-phone"></i> +57 (601) 3454155</a> 
+                                                    <span class="ext">Ext. 8442</span>
+                                                </span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Radio:</span>
+                                                <span class="value"><i class="fa-solid fa-walkie-talkie"></i> Canal 1</span>
+                                                </div>
+                                            <div class="detail-row">
+                                                <span class="label">Celulares:</span>
+                                                <span class="value">
+                                                    <a href="tel:+573123463282" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (312) 3463282</a>, 
+                                                    <a href="tel:+573157459140" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (315) 7459140</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact 6 -->
+                                    <div class="emergency-contact-item coomeva-emergency">
+                                        <div class="contact-header">
+                                            <span class="contact-badge green-badge">Área Protegida</span>
+                                            <h4>Emergencias Médicas Coomeva</h4>
+                                        </div>
+                                        <div class="contact-details">
+                                            <div class="detail-row">
+                                                <span class="label">Marcación Rápida:</span>
+                                                <span class="value rapid-highlight">
+                                                    <a href="tel:#586" class="phone-link"><i class="fa-solid fa-hashtag"></i> #586</a> (Celular)
+                                                </span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span class="label">Celulares:</span>
+                                                <span class="value">
+                                                    <a href="tel:+573164781180" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (316) 4781180</a>, 
+                                                    <a href="tel:+573504127136" class="phone-link"><i class="fa-solid fa-mobile-screen-button"></i> (350) 4127136</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 8: EMERGENCIAS -->
+                <section class="slide-content" id="slide-7">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 8</div>
+                            <h1>Emergencias</h1>
+                        </div>
+                    </div>
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'evacuation-video-tab')">
+                            <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i> Evacuación
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'earthquake-tab')">
+                            <i class="fa-solid fa-house-chimney-crack"></i> ¿Qué debo hacer en caso de sismo?
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Evacuación -->
+                    <div id="evacuation-video-tab" class="tab-panel active">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            Te invitamos a ver el siguiente video para que conozcas el protocolo de evacuación establecido en SierraCol Energy: 🎬
+                        </p>
+                        
+                        <div class="evacuation-video-card">
+                            <div class="video-preview-placeholder">
+                                <div class="youtube-logo-glow">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </div>
+                                <div class="play-overlay">
+                                    <a href="https://www.youtube.com/watch?v=OSzZ42szKRM" target="_blank" class="play-btn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-card-details">
+                                <h3><i class="fa-solid fa-clapperboard"></i> Video Protocolo de Evacuación</h3>
+                                <p>Haz clic en el botón de reproducción o en el botón inferior para abrir el video instructivo en YouTube. Conoce las rutas de escape, el comportamiento adecuado y la ubicación de los puntos de encuentro.</p>
+                                <a href="https://www.youtube.com/watch?v=OSzZ42szKRM" target="_blank" class="btn btn-primary video-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Ver Video en YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: En caso de sismo -->
+                    <div id="earthquake-tab" class="tab-panel">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            En caso de un sismo durante tu jornada de trabajo, es vital actuar de forma rápida y disciplinada. Sigue estas recomendaciones: 🏢
+                        </p>
+                        
+                        <div class="earthquake-grid">
+                            <!-- Durante el sismo -->
+                            <div class="earthquake-phase-card during-phase">
+                                <div class="phase-header">
+                                    <i class="fa-solid fa-hourglass-start"></i>
+                                    <h3>DURANTE EL SISMO</h3>
+                                </div>
+                                <div class="phase-body">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            <div>
+                                                <strong>Conserva la calma:</strong>
+                                                <span>El pánico puede provocar accidentes adicionales. Transmite seguridad a tus compañeros.</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                            <div>
+                                                <strong>Ubica zona segura interna:</strong>
+                                                <span>Aléjate de ventanas, archivadores o elementos que puedan caer. Ubícate cerca de columnas de soporte estructural. Si estás en los pasillos cerca de los ascensores, ubícate en las zonas con señalización de "zona sismoresistente segura".</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-ban"></i>
+                                            <div>
+                                                <strong>No evacues de inmediato:</strong>
+                                                <span>Espera a que el movimiento telúrico finalice por completo antes de salir de las oficinas.</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-elevator"></i>
+                                            <div>
+                                                <strong>No utilices ascensores:</strong>
+                                                <span>El fluido eléctrico podría fallar de forma imprevista dejándote atrapado.</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Después del sismo -->
+                            <div class="earthquake-phase-card after-phase">
+                                <div class="phase-header">
+                                    <i class="fa-solid fa-hourglass-end"></i>
+                                    <h3>DESPUÉS DEL SISMO</h3>
+                                </div>
+                                <div class="phase-body">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-person-walking-arrow-right"></i>
+                                            <div>
+                                                <strong>Evacuación ordenada:</strong>
+                                                <span>Una vez cese el movimiento, evacua el piso de forma ordenada usando únicamente las escaleras de emergencia.</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-users"></i>
+                                            <div>
+                                                <strong>Punto de encuentro:</strong>
+                                                <span>Dirígete directamente al Punto de Encuentro establecido y reporta tu presencia al brigadista de tu piso.</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-kit-medical"></i>
+                                            <div>
+                                                <strong>Reporta lesionados:</strong>
+                                                <span>Si detectas a algún compañero herido o atrapado, notifica inmediatamente al personal médico o brigadistas.</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-triangle-exclamation"></i>
+                                            <div>
+                                                <strong>No reingreses:</strong>
+                                                <span>No vuelvas a ingresar a las instalaciones hasta recibir la confirmación de estructura segura por parte de los brigadistas.</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 9: GESTIÓN AMBIENTAL -->
+                <section class="slide-content" id="slide-8">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 9</div>
+                            <h1>Gestión Ambiental</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'environmental-commitment-tab')">
+                            <i class="fa-solid fa-leaf"></i> Compromiso Ambiental
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'waste-management-tab')">
+                            <i class="fa-solid fa-trash-can"></i> Manejo de residuos
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Compromiso Ambiental -->
+                    <div id="environmental-commitment-tab" class="tab-panel active">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            En SierraCol Energy estamos comprometidos con la conservación del agua, el aire, la biodiversidad y la mitigación del cambio climático en Colombia. 🌎
+                        </p>
+                        
+                        <div class="highlight border-blue" style="margin-top:20px;">
+                            <strong><i class="fa-solid fa-droplet"></i> Control de Derrames:</strong>
+                            <p style="margin-top:5px;">Cualquier goteo o derrame de hidrocarburos o químicos debe ser controlado inmediatamente con el kit ambiental de derrames y reportado a la gerencia ambiental HES.</p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Manejo de Residuos -->
+                    <div id="waste-management-tab" class="tab-panel">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            Como contratista, debes clasificar tus residuos en el sitio de trabajo usando los colores de recipientes normativos de forma correcta: ♻️
+                        </p>
+                        
+                        <div class="waste-bins-grid">
+                            <div class="bin-card green-bin">
+                                <div class="bin-head">Verde</div>
+                                <div class="bin-body">
+                                    <strong>Orgánicos Aprovechables</strong>
+                                    <p>Cáscaras de frutas, restos de comida, hojarasca.</p>
+                                </div>
+                            </div>
+                            <div class="bin-card white-bin">
+                                <div class="bin-head">Blanco</div>
+                                <div class="bin-body">
+                                    <strong>Residuos Aprovechables</strong>
+                                    <p>Plástico limpio, cartón, papel, vidrio y metales.</p>
+                                </div>
+                            </div>
+                            <div class="bin-card black-bin">
+                                <div class="bin-head">Negro</div>
+                                <div class="bin-body">
+                                    <strong>No Aprovechables</strong>
+                                    <p>Papel higiénico, servilletas sucias, tapabocas, restos de barrido.</p>
+                                </div>
+                            </div>
+                            <div class="bin-card red-bin">
+                                <div class="bin-head">Rojo</div>
+                                <div class="bin-body">
+                                    <strong>Peligrosos / Industriales</strong>
+                                    <p>Trapos con aceite, filtros usados, pilas, guantes contaminados con químicos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 10: RESPONSABILIDADES -->
+                <section class="slide-content" id="slide-9">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Módulo 10</div>
+                            <h1>Responsabilidades del Contratista</h1>
+                        </div>
+                    </div>
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'sst-responsibilities-tab')">
+                            <i class="fa-solid fa-hand-holding-heart"></i> Responsabilidades SST
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'environmental-responsibilities-tab')">
+                            <i class="fa-solid fa-leaf"></i> Responsabilidades Ambientales
+                        </button>
+                    </div>
+
+                    <!-- Panel: Responsabilidades SST -->
+                    <div id="sst-responsibilities-tab" class="tab-panel active">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            A continuación te presentamos tus responsabilidades en temas de seguridad y salud en el trabajo:
+                        </p>
+                        
+                        <div class="sst-resp-grid">
+                            <!-- Item 1 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">1</div>
+                                    <div style="font-size: 20px; color: rgb(30, 60, 150);"><i class="fa-solid fa-bullseye"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Participar y contribuir al cumplimiento de los objetivos de seguridad y salud en el trabajo</p>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">2</div>
+                                    <div style="font-size: 20px; color: rgb(30, 60, 150);"><i class="fa-solid fa-notes-medical"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Suministrar información clara, veraz y completa de tu estado de salud</p>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">3</div>
+                                    <div style="font-size: 20px; color: rgb(30, 60, 150);"><i class="fa-solid fa-chalkboard-user"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Participar en las actividades de capacitación y salud realizadas por SierraCol Energy y tu empresa</p>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">4</div>
+                                    <div style="font-size: 20px; color: rgb(30, 60, 150);"><i class="fa-solid fa-heart-pulse"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Procurar el cuidado integral de tu salud</p>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">5</div>
+                                    <div style="font-size: 20px; color: rgb(30, 60, 150);"><i class="fa-solid fa-book-shield"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Cumplir las normas, reglamentos e instrucciones de seguridad y salud en el trabajo</p>
+                                </div>
+                            </div>
+                            <!-- Item 6 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">6</div>
+                                    <div style="font-size: 20px; color: rgb(115, 0, 0);"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Informar oportunamente acerca de peligros y riesgos en el trabajo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel: Responsabilidades Ambientales -->
+                    <div id="environmental-responsibilities-tab" class="tab-panel">
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            Ahora, te presentamos tus responsabilidades en temas ambientales:
+                        </p>
+                        
+                        <div class="sst-resp-grid">
+                            <!-- Item 1 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">1</div>
+                                    <div style="font-size: 20px; color: #2e7d32;"><i class="fa-solid fa-earth-americas"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Propender por el cuidado del medio ambiente</p>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">2</div>
+                                    <div style="font-size: 20px; color: #2e7d32;"><i class="fa-solid fa-file-signature"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Cumplir con las normas, permisos y licencias establecidas para las diferentes operaciones de SierraCol Energy.</p>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">3</div>
+                                    <div style="font-size: 20px; color: #c62828;"><i class="fa-solid fa-droplet-slash"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Reportar oportunamente situaciones que puedan generar impactos ambientales en tu sitio de trabajo o durante la realización de tus actividades</p>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">4</div>
+                                    <div style="font-size: 20px; color: #2e7d32;"><i class="fa-solid fa-recycle"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Cumplir el procedimiento para manejo de residuos sólidos (puntos ecológicos y código de colores)</p>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">5</div>
+                                    <div style="font-size: 20px; color: #2e7d32;"><i class="fa-solid fa-list-check"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Conocer y aplicar en tu área lo establecido en las fichas del plan de manejo ambiental</p>
+                                </div>
+                            </div>
+                            <!-- Item 6 -->
+                            <div class="sst-resp-card">
+                                <div class="sst-resp-card-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div class="sst-resp-num">6</div>
+                                    <div style="font-size: 20px; color: #2e7d32;"><i class="fa-solid fa-chart-line"></i></div>
+                                </div>
+                                <div class="sst-resp-content">
+                                    <p>Participar y contribuir al cumplimiento de los objetivos ambientales y los programas de gestión</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons-navigation">
+                        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+                        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- SLIDE 11: EVALUACIÓN FINAL -->
+                <section class="slide-content" id="slide-10">
+                    <div class="slide-header">
+                        <div class="slide-header-left">
+                            <div class="badge">Evaluación</div>
+                            <h1>Evaluación Final de Inducción HES</h1>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenedor Inicial del Quiz -->
+                    <div id="quiz-intro">
+                        <p>Has completado todos los módulos teóricos de la inducción HES de SierraCol Energy.</p>
+                        <p>Para certificar tu participación, debes responder este breve cuestionario sobre los conceptos clave presentados.</p>
+                        
+                        <div class="quiz-info-card">
+                            <div class="q-info-item">
+                                <i class="fa-solid fa-list-check"></i>
+                                <span><strong>Preguntas:</strong> 5</span>
+                            </div>
+                            <div class="q-info-item">
+                                <i class="fa-solid fa-percent"></i>
+                                <span><strong>Aprobación Mínima:</strong> 80% (4 correctas)</span>
+                            </div>
+                        </div>
+
+                        <div class="buttons" style="justify-content: center; margin-top:30px;">
+                            <button class="btn btn-primary btn-large" onclick="startQuiz()">
+                                <i class="fa-solid fa-play"></i> Comenzar Evaluación
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contenedor de Preguntas Activo -->
+                    <div id="quiz-question-container" style="display: none;">
+                        <div class="quiz-header">
+                            <span id="quiz-progress-text">Pregunta 1 de 5</span>
+                            <div class="quiz-progress-bar-track">
+                                <div class="quiz-progress-bar-fill" id="quiz-progress-bar" style="width: 20%;"></div>
+                            </div>
+                        </div>
+
+                        <h3 id="quiz-question-title" class="quiz-question">¿Cuál es la pregunta?</h3>
+                        
+                        <div class="quiz-options" id="quiz-options-list">
+                            <!-- Inyectadas dinámicamente en JS -->
+                        </div>
+
+                        <div class="quiz-feedback" id="quiz-feedback-box" style="display: none;">
+                            <!-- Feedback de respuesta correcta/incorrecta -->
+                        </div>
+
+                        <div class="buttons" style="margin-top:35px;">
+                            <button class="btn btn-primary" id="btn-submit-answer" onclick="submitAnswer()" disabled>
+                                Validar Respuesta <i class="fa-solid fa-circle-check"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contenedor de Resultados -->
+                    <div id="quiz-results" style="display: none;">
+                        <div class="result-circle" id="result-score-circle">0/5</div>
+                        <h2 id="result-title">Resultado de la Evaluación</h2>
+                        <p id="result-message">Mensaje del resultado...</p>
+
+                        <!-- Bloque de Aprobación: Datos y Certificado -->
+                        <div id="success-block" style="display: none;">
+                            <div class="certificate-form">
+                                <label for="student-name">Nombre completo para el certificado:</label>
+                                <input type="text" id="student-name" placeholder="Escribe tu nombre aquí" oninput="updateCertificateName()">
+                            </div>
+
+                            <!-- Certificado visual para imprimir -->
+                            <div class="certificate" id="certificate-print">
+                                <div class="cert-border-outer">
+                                    <div class="cert-border-inner">
+                                        <div class="cert-watermark">HES</div>
+                                        <div class="cert-header">
+                                            <img src="logo_sierracol.png" alt="SierraCol Energy" class="cert-logo">
+                                            <span>Salud, Seguridad y Medio Ambiente (HES)</span>
+                                        </div>
+                                        <div class="cert-title">CERTIFICADO DE APROBACIÓN</div>
+                                        <p class="cert-presents">Se otorga el presente reconocimiento a:</p>
+                                        <div class="cert-name" id="cert-display-name">TU NOMBRE COMPLETO</div>
+                                        <p class="cert-text">Por haber asistido y aprobado satisfactoriamente la <strong>Inducción General HES para Contratistas</strong>, demostrando su alineación técnica y compromiso operativo con la cultura de seguridad, salud en el trabajo y protección del medio ambiente de SierraCol Energy.</p>
+                                        
+                                        <div class="cert-footer">
+                                            <div class="cert-date-col">
+                                                <p>Fecha de Aprobación:</p>
+                                                <p><strong id="cert-date">-- de -- de ----</strong></p>
+                                            </div>
+                                            <div class="cert-sig-col">
+                                                <div class="sig-line"></div>
+                                                <p><strong>Gerencia HES</strong></p>
+                                                <p>SierraCol Energy SAS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="buttons" style="justify-content: center; margin-top: 30px;">
+                                <button class="btn btn-success" onclick="printCertificate()">
+                                    <i class="fa-solid fa-print"></i> Imprimir Certificado / Guardar PDF
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Bloque de Reprobación -->
+                        <div id="fail-block" style="display: none;">
+                            <div class="buttons" style="justify-content: center; margin-top: 30px;">
+                                <button class="btn btn-secondary" onclick="restartQuiz()">
+                                    <i class="fa-solid fa-rotate-left"></i> Reintentar Evaluación
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de lógica -->
+    <script src="induccion.js"></script>
+</body>
+</html>
