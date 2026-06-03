@@ -1038,7 +1038,8 @@ p {
 .sst-resp-card.danger-card-row,
 .unsafe-condition-card.danger-card-row,
 .unsafe-act-card.danger-card-row,
-.concept-definition-box.danger-card-row {
+.concept-definition-box.danger-card-row,
+.emergency-contact-item.danger-card-row {
     display: flex;
     flex-direction: row;
     align-items: center;
