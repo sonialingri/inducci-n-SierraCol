@@ -839,6 +839,75 @@ p {
 .font-mitigation { color: #22c55e; background: rgba(34, 197, 94, 0.1); }
 .font-transparency { color: #ec4899; background: rgba(236, 72, 153, 0.1); }
 
+/* --- Estilos Módulo 4: Política Integrada de Gestión --- */
+.policy-commitments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.policy-commitment-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    background: white;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+}
+
+.policy-commitment-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.04);
+    border-color: rgb(30, 60, 150);
+}
+
+.policy-commitment-item p {
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: #475569;
+    margin: 0;
+}
+
+.policy-commitment-item .commitment-num {
+    background: rgba(30, 60, 150, 0.1);
+    color: rgb(30, 60, 150);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* SWA Highlight */
+.policy-commitment-item.swa-highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+    border: 1.5px solid rgb(115, 0, 0);
+    box-shadow: 0 4px 15px rgba(115, 0, 0, 0.05);
+}
+
+.policy-commitment-item.swa-highlight:hover {
+    border-color: rgb(115, 0, 0);
+    box-shadow: 0 8px 20px rgba(115, 0, 0, 0.1);
+}
+
+.policy-commitment-item.swa-highlight p strong {
+    color: rgb(115, 0, 0);
+}
+
+.policy-commitment-item.swa-highlight .commitment-num.swa-num {
+    background: rgb(115, 0, 0);
+    color: white;
+}
+
 /* --- Estilos Módulo 3: Política y SWA --- */
 .stop-work-authority-card {
     background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
@@ -2725,7 +2794,7 @@ p {
         font-size: 15px;
     }
 
-    .phva-grid, .rules-grid, .waste-bins-grid, .incident-row, .pillars-grid, .benefits-grid, .structure-list-grid, .concepts-life-grid, .danger-elements-grid, .admin-hazards-grid, .unsafe-conditions-grid, .unsafe-acts-grid, .controls-hazards-grid, .discipline-grid, .reporting-channels-container, .emergency-contacts-list, .evacuation-video-card, .earthquake-grid, .sst-resp-grid {
+    .policy-commitments-grid, .phva-grid, .rules-grid, .waste-bins-grid, .incident-row, .pillars-grid, .benefits-grid, .structure-list-grid, .concepts-life-grid, .danger-elements-grid, .admin-hazards-grid, .unsafe-conditions-grid, .unsafe-acts-grid, .controls-hazards-grid, .discipline-grid, .reporting-channels-container, .emergency-contacts-list, .evacuation-video-card, .earthquake-grid, .sst-resp-grid {
         grid-template-columns: 1fr;
     }
 

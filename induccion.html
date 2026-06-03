@@ -25,7 +25,7 @@
             <li class="menu-item active" data-slide="0"><i class="fa-solid fa-house-chimney"></i> <span>1. Bienvenida</span></li>
             <li class="menu-item locked" data-slide="1"><i class="fa-solid fa-sitemap"></i> <span>2. HES-MS</span></li>
             <li class="menu-item locked" data-slide="2"><i class="fa-solid fa-bullseye"></i> <span>3. Objetivos y Pilares</span></li>
-            <li class="menu-item locked" data-slide="3"><i class="fa-solid fa-handshake-angle"></i> <span>4. Política HES</span></li>
+            <li class="menu-item locked" data-slide="3"><i class="fa-solid fa-handshake-angle"></i> <span>4. Política integrada de gestión</span></li>
             <li class="menu-item locked" data-slide="4"><i class="fa-solid fa-heart-pulse"></i> <span>5. Conceptos para Cuidar tu Vida</span></li>
             <li class="menu-item locked" data-slide="5"><i class="fa-solid fa-clipboard-check"></i> <span>6. Disciplina operativa</span></li>
             <li class="menu-item locked" data-slide="6"><i class="fa-solid fa-bullhorn"></i> <span>7. Reportes</span></li>
@@ -342,28 +342,145 @@
                     </div>
                 </section>
 
-                <!-- SLIDE 4: POLÍTICA HES -->
+                <!-- SLIDE 4: POLÍTICA INTEGRADA DE GESTIÓN -->
                 <section class="slide-content" id="slide-3">
                     <div class="slide-header">
                         <div class="slide-header-left">
                             <div class="badge">Módulo 4</div>
-                            <h1>Política HES y Autoridad de Parada</h1>
+                            <h1>Política integrada de gestión</h1>
                         </div>
                     </div>
-                    <p>Nuestra Política HES ratifica que ninguna meta de producción o urgencia operativa está por encima de la salud y la seguridad de las personas o de la protección del medio ambiente.</p>
-                    <p>Todos los contratistas deben cumplir rigurosamente con los estándares y lineamientos definidos por la compañía.</p>
                     
-                    <div class="stop-work-authority-card">
-                        <div class="swa-header">
-                            <i class="fa-solid fa-circle-stop"></i>
-                            <div>
-                                <h2>AUTORIDAD DE PARADA (SWA)</h2>
-                                <span>Stop Work Authority</span>
-                            </div>
+                    <div class="slide-tabs">
+                        <button class="tab-btn active" onclick="switchSubTab(event, 'policy-purpose-tab')">
+                            <i class="fa-solid fa-circle-info"></i> 1. Propósito
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'policy-application-tab')">
+                            <i class="fa-solid fa-user-gear"></i> 2. Aplicación
+                        </button>
+                        <button class="tab-btn" onclick="switchSubTab(event, 'policy-commitments-tab')">
+                            <i class="fa-solid fa-handshake-angle"></i> 3. Compromisos
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Propósito -->
+                    <div id="policy-purpose-tab" class="tab-panel active">
+                        <h3 style="font-family: 'Outfit', sans-serif; color: rgb(30, 60, 150); font-size: 18px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                            POLÍTICA INTEGRADA DE SEGURIDAD, SALUD EN EL TRABAJO, AMBIENTE, RESPONSABILIDAD SOCIAL Y MANEJO DE RIESGOS (HES-SR-RM)
+                        </h3>
+                        <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            El propósito de esta política integrada de seguridad, salud en el trabajo, ambiente, responsabilidad social y manejo de riesgos (HES-SR-RM por sus siglas en inglés), en adelante, la <strong>"Política"</strong>, es reiterar y reforzar el compromiso de SierraCol Energy Limited y sus subsidiarias (en adelante la <strong>"Compañía"</strong>) con la protección de la salud y seguridad de nuestros colaboradores, el ambiente, la biodiversidad y las comunidades vecinas.
+                        </p>
+                        <div class="highlight border-blue" style="margin-top: 25px;">
+                            <strong><i class="fa-solid fa-shield-halved"></i> Compromiso Fundamental</strong>
+                            <p style="margin-top: 10px;">SierraCol Energy antepone el bienestar de las personas y del medio ambiente ante cualquier otra consideración operacional o comercial.</p>
                         </div>
-                        <p class="swa-body">Tienes el <strong>derecho, deber y la responsabilidad</strong> de detener de inmediato cualquier tarea o proceso si consideras que las condiciones de seguridad no están dadas o representan un peligro inminente para ti o tus compañeros.</p>
-                        <div class="swa-footer">
-                            <i class="fa-solid fa-shield-halved"></i> <strong>SierraCol Energy respalda 100% tu decisión. No habrá ninguna represalia por ejercer esta autoridad.</strong>
+                    </div>
+
+                    <!-- Panel 2: Aplicación -->
+                    <div id="policy-application-tab" class="tab-panel">
+                        <p style="font-size: 15.5px; line-height: 1.7; color: #334155; margin-bottom: 15px;">
+                            Es responsabilidad de los trabajadores, contratistas y subcontratistas el autocuidado y cumplimiento de políticas, estándares, manuales, procedimientos, guías, instructivos y protocolos establecidos por la Compañía. Todos los trabajadores de la Compañía, y en particular aquellos que tengan bajo su responsabilidad el seguimiento a las actividades de contratistas y subcontratistas, gestionarán de manera responsable el desempeño de estos frente a los riesgos HES-SR-RM de conformidad con esta Política.
+                        </p>
+                        <p style="font-size: 15.5px; line-height: 1.7; color: #334155; margin-bottom: 15px;">
+                            De igual manera, todos los trabajadores, contratistas y subcontratistas deben reportar cualquier posible violación o incumplimiento de la legislación y regulaciones relacionados con asuntos HES-SR-RM, así como cualquier posible violación o incumplimiento de esta Política, a su supervisor inmediato o a los departamentos de HES, Responsabilidad Social o Legal de la Compañía, así como cooperar en la investigación de situaciones de posible incumplimiento de la legislación, regulaciones, estándares o procedimientos de HES-SR-RM, o no-conformidad con esta Política.
+                        </p>
+                        <p style="font-size: 15.5px; line-height: 1.7; color: #334155; margin-bottom: 15px;">
+                            Esta Política se hace extensiva a todas nuestras operaciones de exploración, explotación, venta y transporte de petróleo, gas e hidrocarburos en general. Para proporcionar un marco de referencia a los objetivos del Sistema Integrado de Gestión (HESMS) y así dar cumplimiento a esta Política, es necesario articular esfuerzos con los socios operadores mediante el seguimiento proactivo a la implementación de sus planes HES-SR-RM. En las operaciones asociadas, el cumplimiento de esta Política se debe efectuar en coordinación y concurrencia con las políticas aplicables de las compañías que actúan como operadoras.
+                        </p>
+                    </div>
+
+                    <!-- Panel 3: Compromisos -->
+                    <div id="policy-commitments-tab" class="tab-panel">
+                        <p style="font-size: 15.5px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+                            SierraCol Energy y sus contratistas se comprometen a cumplir con los siguientes lineamientos del Sistema Integrado de Gestión:
+                        </p>
+                        <div class="policy-commitments-grid">
+                            <!-- 1 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">1</div>
+                                <p>Proteger la salud y la seguridad de los trabajadores, las comunidades, los contratistas, los subcontratistas y demás grupos de interés, así como el ambiente en las áreas donde la compañía realiza operaciones.</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">2</div>
+                                <p>Prevenir enfermedades cardiovasculares y enfermedades crónicas no transmisibles en los trabajadores promoviendo el cuidado de la salud como estilo de vida.</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">3</div>
+                                <p>Conducir las operaciones de la Compañía de conformidad con los requisitos legales, normas, regulaciones, y otros requisitos aplicables en materia HES-SR-RM que reflejen los más altos estándares éticos y nuestro compromiso continuo con la integridad, nuestros grupos de interés y el ambiente.</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">4</div>
+                                <p>Identificar peligros, evaluar, valorar y reducir los riesgos de HES-SR-RM, estableciendo los respectivos programas proactivos frente a los riesgos prioritarios y los controles con el fin de procurar un entorno laboral seguro y saludable, al igual que mitigar impactos adversos para las comunidades y el ambiente, preservando los activos de la Compañía.</p>
+                            </div>
+                            <!-- 5 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">5</div>
+                                <p>Respetar la cultura, las costumbres y Derechos Humanos de las comunidades, así como las necesidades y expectativas de los grupos de interés específicos, promoviendo la sostenibilidad y la autosuficiencia de los mismos, en concordancia con los Objetivos de Desarrollo Sostenible dentro del ámbito de influencia de la Compañía.</p>
+                            </div>
+                            <!-- 6 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">6</div>
+                                <p>Implementar, mantener, monitorear, mejorar y reportar de manera continua el desempeño de nuestro Sistema Integrado de Gestión (HESMS) permitiéndole a la Compañía asegurar que en todas sus actividades se consideren y prioricen los aspectos HES-SR-RM.</p>
+                            </div>
+                            <!-- 7 -->
+                            <div class="policy-commitment-item swa-highlight">
+                                <div class="commitment-num swa-num">7</div>
+                                <p><strong>Autoridad de Parada (SWA):</strong> Autorizar a todos los empleados, contratistas y subcontratistas a detener trabajos o acciones que se consideren inseguras y que puedan resultar en lesiones, enfermedades, daños a las instalaciones o impactos adversos al ambiente o a las comunidades vecinas.</p>
+                            </div>
+                            <!-- 8 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">8</div>
+                                <p>Realizar una adecuada preparación para prevenir y dar respuesta oportuna y eficiente a las emergencias de HES-SR-RM, que incluya capacitaciones para empleados y comunidades, pruebas periódicas y mecanismos de notificación.</p>
+                            </div>
+                            <!-- 9 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">9</div>
+                                <p>Mantener una efectiva comunicación con los trabajadores y demás grupos de interés dentro de los que se incluyen las comunidades vecinas, las autoridades locales y nacionales sobre los aspectos y los riesgos de la operación y del entorno que deben ser atendidos de manera oportuna y eficaz.</p>
+                            </div>
+                            <!-- 10 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">10</div>
+                                <p>Integrar los aspectos y obligaciones de HES-SR-RM en la planificación de los negocios, en todas las etapas del proceso productivo, en todos los métodos de trabajo y en la toma de decisiones, de tal forma que todos los trabajadores asuman sus responsabilidades en la materia.</p>
+                            </div>
+                            <!-- 11 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">11</div>
+                                <p>Realizar la selección y contratación de empresas contratistas y proveedores que gerencien los aspectos de HES-RM-SR de acuerdo con los estándares legales y de la Compañía, que evidencien un efectivo compromiso con el manejo de los riesgos y demuestren un excelente desempeño en HES-SR-RM.</p>
+                            </div>
+                            <!-- 12 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">12</div>
+                                <p>Promover la seguridad y salud de los trabajadores, contratistas, subcontratistas y demás grupos de interés fomentando la cultura, información, consulta, participación, entrenamiento, capacitación y formación de competencias en materia preventiva.</p>
+                            </div>
+                            <!-- 13 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">13</div>
+                                <p>Promover buenas relaciones con las comunidades, las organizaciones de la sociedad civil y demás grupos de interés, propiciando el valor compartido, dando prelación al empleo y la adquisición de bienes y servicios locales, sin discriminación en los procesos de contratación y compensación.</p>
+                            </div>
+                            <!-- 14 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">14</div>
+                                <p>Operar de manera sostenible por medio de la mitigación y adaptación al cambio climático, el uso eficiente de la energía y los recursos naturales, evaluando e implementando medidas para reducir el consumo de agua en nuestros activos y promoviendo una cultura encaminada a la prevención de la contaminación, el manejo y la reducción de las emisiones, los efluentes y los residuos, la gestión de riesgos en escenarios de inundación o de escasez hídrica, así como a la protección del ambiente y su biodiversidad.</p>
+                            </div>
+                            <!-- 15 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">15</div>
+                                <p>Realizar los procesos de adquisición de tierras y reasentamientos a los que haya lugar de acuerdo con las buenas prácticas de la industria y las leyes aplicables.</p>
+                            </div>
+                            <!-- 16 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">16</div>
+                                <p>Tomar medidas orientadas a reducir la pérdida de biodiversidad, prevenir la intervención de áreas con alto valor en biodiversidad, llevar a cabo la compensación de impactos negativos producidos sobre el ambiente y la biodiversidad en el desarrollo de los proyectos, realizar los procedimientos para la gestión del cierre, rehabilitación, desmantelamiento y recuperación de las zonas intervenidas una vez finalizadas las actividades en las áreas de operación, de acuerdo con el marco legal aplicable.</p>
+                            </div>
+                            <!-- 17 -->
+                            <div class="policy-commitment-item">
+                                <div class="commitment-num">17</div>
+                                <p>Tener en cuenta la posición de los grupos de interés sobre asuntos que puedan afectar el ambiente y el entorno social de nuestras operaciones.</p>
+                            </div>
                         </div>
                     </div>
 
