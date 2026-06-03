@@ -34,21 +34,19 @@ body {
 }
 
 .logo {
-    background: white;
-    padding: 12px 18px;
-    border-radius: 8px;
-    margin-bottom: 40px;
+    padding: 15px 10px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-logo {
     max-width: 100%;
     height: auto;
-    max-height: 50px;
+    max-height: 120px;
     object-fit: contain;
+    filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.4));
 }
 
 .menu {
@@ -1027,6 +1025,77 @@ p {
     color: rgb(30, 60, 150);
 }
 
+.danger-element-card .element-header img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.danger-element-card.danger-card-row,
+.hazard-cat-card.danger-card-row,
+.discipline-card.danger-card-row,
+.bin-card.danger-card-row,
+.sst-resp-card.danger-card-row,
+.unsafe-condition-card.danger-card-row,
+.unsafe-act-card.danger-card-row,
+.concept-definition-box.danger-card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.bin-card.danger-card-row {
+    padding-right: 15px;
+}
+
+.bin-text-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.danger-card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.discipline-card .danger-card-info {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.danger-card-media {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #edf2f7;
+    padding: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.concept-definition-box .danger-card-media {
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.element-media-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 .danger-element-card p {
     font-size: 13.5px;
     line-height: 1.5;
@@ -1787,7 +1856,8 @@ p {
     margin-top: 10px;
 }
 
-.unsafe-condition-card {
+.unsafe-condition-card,
+.unsafe-act-card {
     background: #f8fafc;
     border: 1px solid #edf2f7;
     border-radius: 10px;
@@ -1810,7 +1880,8 @@ p {
     color: rgb(30, 60, 150);
 }
 
-.unsafe-condition-card p {
+.unsafe-condition-card p,
+.unsafe-act-card p {
     font-size: 13.5px;
     line-height: 1.5;
     color: #475569;
@@ -2459,7 +2530,7 @@ p {
 .cert-logo {
     max-width: 200px;
     height: auto;
-    max-height: 55px;
+    max-height: 120px;
     object-fit: contain;
 }
 
