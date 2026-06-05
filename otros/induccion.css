@@ -370,6 +370,21 @@ p {
     margin-bottom: 0;
 }
 
+.slide-header-right {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .slide-header-right {
+        display: none;
+    }
+}
+
 /* --- Estilos Especiales para la Mascota de Bienvenida --- */
 .welcome-container {
     display: flex;
