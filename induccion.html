@@ -22,7 +22,7 @@
             <!-- Los elementos del menú serán interactivos -->
             <li class="menu-item active" data-slide="0"><i class="fa-solid fa-house-chimney"></i> <span>1. Bienvenida</span></li>
             <li class="menu-item locked" data-slide="1"><i class="fa-solid fa-sitemap"></i> <span>2. HES-MS</span></li>
-            <li class="menu-item locked" data-slide="2"><i class="fa-solid fa-bullseye"></i> <span>3. Objetivos y Pilares</span></li>
+            <li class="menu-item locked" data-slide="2"><i class="fa-solid fa-bullseye"></i> <span>3. Nuestros Objetivos</span></li>
             <li class="menu-item locked" data-slide="3"><i class="fa-solid fa-handshake-angle"></i> <span>4. Políticas y reglamentos</span></li>
             <li class="menu-item locked" data-slide="4"><i class="fa-solid fa-heart-pulse"></i> <span>5. Conceptos para Cuidar tu Vida</span></li>
             <li class="menu-item locked" data-slide="5"><i class="fa-solid fa-clipboard-check"></i> <span>6. Disciplina operativa</span></li>
@@ -252,95 +252,66 @@
                     </div>
                 </section>
 
-                <!-- SLIDE 3: OBJETIVOS Y PILARES HES -->
+                <!-- SLIDE 3: NUESTROS OBJETIVOS -->
                 <section class="slide-content" id="slide-2">
                     <div class="slide-header">
                         <div class="slide-header-left">
                             <div class="badge">Módulo 3</div>
-                            <h1>Objetivos y Pilares HES</h1>
+                            <h1>Nuestros Objetivos</h1>
                         </div>
                         <div class="slide-header-right">
                             <span>Inducción HSE para contratistas</span>
                         </div>
                     </div>
                     
-                    <div class="slide-tabs">
-                        <button class="tab-btn active" onclick="switchSubTab(event, 'objectives-tab')">
-                            <i class="fa-solid fa-bullseye"></i> Nuestros Objetivos
-                        </button>
-                        <button class="tab-btn" onclick="switchSubTab(event, 'pillars-tab')">
-                            <i class="fa-solid fa-gem"></i> Nuestros Pilares
-                        </button>
+                    <!-- Contenido: Objetivos -->
+                    <div class="objectives-title-bar">
+                        <div class="objectives-title-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h2>Nuestros objetivos</h2>
                     </div>
-
-                    <!-- Panel 1: Objetivos -->
-                    <div id="objectives-tab" class="tab-panel active">
-                        <div class="objectives-title-bar">
-                            <div class="objectives-title-icon">
-                                <i class="fa-solid fa-bullseye"></i>
+                    
+                    <div class="objectives-grid">
+                        <!-- Columna Izquierda: Seguridad Industrial -->
+                        <div class="objectives-left-col">
+                            <div class="objective-item">
+                                Desempeñarnos consistentemente como la mejor empresa de Oil & Gas, con operaciones libres de incidentes
                             </div>
-                            <h2>Nuestros objetivos</h2>
+                            <div class="objective-item">
+                                Contar con equipos de trabajo altamente competentes en seguridad y Salud en el Trabajo
+                            </div>
+                            <div class="objective-item">
+                                Mejorar la articulación de las estrategias HS y Responsabilidad Social
+                            </div>
+                            <div class="objective-item">
+                                Mantener nuestro HESMS permanentemente alineado con normas internacionales
+                            </div>
                         </div>
                         
-                        <div class="objectives-grid">
-                            <!-- Columna Izquierda: Seguridad Industrial -->
-                            <div class="objectives-left-col">
-                                <div class="objective-item">
-                                    Desempeñarnos consistentemente como la mejor empresa de Oil & Gas, con operaciones libres de incidentes
-                                </div>
-                                <div class="objective-item">
-                                    Contar con equipos de trabajo altamente competentes en seguridad y Salud en el Trabajo
-                                </div>
-                                <div class="objective-item">
-                                    Mejorar la articulación de las estrategias HS y Responsabilidad Social
-                                </div>
-                                <div class="objective-item">
-                                    Mantener nuestro HESMS permanentemente alineado con normas internacionales
-                                </div>
-                            </div>
-                            
-                            <!-- Columna Central: Imagen Circular -->
-                            <div class="objectives-center-col">
-                                <img src="otros/objetivos_pilares.png" alt="Objetivos y Pilares HES SierraCol" class="objectives-circle-img">
-                            </div>
-                            
-                            <!-- Columna Derecha: Gestión Ambiental -->
-                            <div class="objectives-right-col">
-                                <div class="objective-item environmental">
-                                    Ganar Confianza en el Manejo Ambiental de los Grupos de Interés
-                                </div>
-                                <div class="objective-item environmental">
-                                    Garantizar la Viabilidad y sostenibilidad ambiental en los tiempos requeridos por el negocio
-                                </div>
-                                <div class="objective-item environmental">
-                                    Mantener la excelencia y ser reconocidos por la gestión ambiental
-                                </div>
-                            </div>
+                        <!-- Columna Central: Imagen Circular -->
+                        <div class="objectives-center-col">
+                            <img src="otros/objetivos_pilares.png" alt="Objetivos HES SierraCol" class="objectives-circle-img">
                         </div>
-
-                        <!-- Eslogan -->
-                        <div class="slogan-container">
-                            <div class="slogan-top">Nos une</div>
-                            <div class="slogan-bottom">la vida</div>
+                        
+                        <!-- Columna Derecha: Gestión Ambiental -->
+                        <div class="objectives-right-col">
+                            <div class="objective-item environmental">
+                                Ganar Confianza en el Manejo Ambiental de los Grupos de Interés
+                            </div>
+                            <div class="objective-item environmental">
+                                Garantizar la Viabilidad y sostenibilidad ambiental en los tiempos requeridos por el negocio
+                            </div>
+                            <div class="objective-item environmental">
+                                Mantener la excelencia y ser reconocidos por la gestión ambiental
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Panel 2: Pilares -->
-                    <div id="pillars-tab" class="tab-panel">
-                        <div class="pillars-grid">
-                            <div class="pillar-graphic-card">
-                                <h3>Seguridad y Salud en el Trabajo</h3>
-                                <div class="pillar-image-wrapper">
-                                    <img src="otros/pilares_sst.png" alt="Pilares Seguridad y Salud en el Trabajo" class="pillar-img">
-                                </div>
-                            </div>
-                            <div class="pillar-graphic-card">
-                                <h3>Gestión Ambiental</h3>
-                                <div class="pillar-image-wrapper">
-                                    <img src="otros/pilares_ambiental.png" alt="Pilares de la Gestión Ambiental" class="pillar-img">
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Eslogan -->
+                    <div class="slogan-container">
+                        <div class="slogan-top">Nos une</div>
+                        <div class="slogan-bottom">la vida</div>
                     </div>
 
                     <div class="buttons-navigation">
