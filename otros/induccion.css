@@ -1236,6 +1236,22 @@ p {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hazard-cat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+}
+
+.hazard-cat-card.most-common {
+    background: #fffbeb; /* Soft amber background */
+    border-color: #fcd34d; /* Soft yellow border */
+    box-shadow: 0 2px 4px rgba(234,179,8,0.02);
+}
+
+.hazard-cat-card.most-common:hover {
+    box-shadow: 0 10px 15px -3px rgba(234, 179, 8, 0.12), 0 4px 6px -2px rgba(234, 179, 8, 0.06);
 }
 
 .hazard-cat-card .cat-header {
@@ -1255,6 +1271,18 @@ p {
     line-height: 1.5;
     color: #475569;
     margin: 0;
+}
+
+.common-badge {
+    background: #eab308;
+    color: #451a03;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    margin-left: auto;
+    letter-spacing: 0.5px;
 }
 
 /* Grilla Controles para los Peligros */
