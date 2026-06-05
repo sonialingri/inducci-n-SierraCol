@@ -372,9 +372,9 @@ p {
 
 .slide-header-right {
     font-family: 'Outfit', sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
-    color: #64748b;
+    color: #334155;
     margin-bottom: 4px;
     white-space: nowrap;
 }
