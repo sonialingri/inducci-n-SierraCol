@@ -218,6 +218,13 @@ document.addEventListener("DOMContentLoaded", () => {
         saveProgress();
         updateUI();
 
+        // Si tiene pestañas, resetear al primero al ingresar
+        const activeSlideEl = slides[currentSlide];
+        const tabButtons = activeSlideEl.querySelectorAll(".slide-tabs .tab-btn");
+        if (tabButtons.length > 0) {
+            tabButtons[0].click();
+        }
+
         // Si entramos al módulo 11 (índice 10) y ya se aprobó previamente, recargar la pantalla del certificado
         if (currentSlide === 10) {
             checkExistingApproval();
@@ -225,6 +232,24 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.nextSlide = function() {
+        const activeSlideEl = slides[currentSlide];
+        const tabButtons = activeSlideEl.querySelectorAll(".slide-tabs .tab-btn");
+        
+        if (tabButtons.length > 0) {
+            let activeIndex = -1;
+            tabButtons.forEach((btn, idx) => {
+                if (btn.classList.contains("active")) {
+                    activeIndex = idx;
+                }
+            });
+            if (activeIndex !== -1 && activeIndex < tabButtons.length - 1) {
+                // Ir a la siguiente pestaña interna
+                tabButtons[activeIndex + 1].click();
+                return;
+            }
+        }
+
+        // Si no hay pestañas o estamos en la última, avanzar al siguiente slide
         if (currentSlide < totalSlides - 1) {
             currentSlide++;
             
@@ -235,14 +260,46 @@ document.addEventListener("DOMContentLoaded", () => {
             
             saveProgress();
             updateUI();
+
+            // Al entrar al nuevo slide, si tiene pestañas, resetear al primero
+            const newActiveSlide = slides[currentSlide];
+            const newTabButtons = newActiveSlide.querySelectorAll(".slide-tabs .tab-btn");
+            if (newTabButtons.length > 0) {
+                newTabButtons[0].click();
+            }
         }
     };
 
     window.prevSlide = function() {
+        const activeSlideEl = slides[currentSlide];
+        const tabButtons = activeSlideEl.querySelectorAll(".slide-tabs .tab-btn");
+        
+        if (tabButtons.length > 0) {
+            let activeIndex = -1;
+            tabButtons.forEach((btn, idx) => {
+                if (btn.classList.contains("active")) {
+                    activeIndex = idx;
+                }
+            });
+            if (activeIndex > 0) {
+                // Ir a la pestaña interna anterior
+                tabButtons[activeIndex - 1].click();
+                return;
+            }
+        }
+
+        // Si no hay pestañas o estamos en la primera, retroceder al slide anterior
         if (currentSlide > 0) {
             currentSlide--;
             saveProgress();
             updateUI();
+
+            // Al retroceder, si el slide anterior tiene pestañas, mostrar la última
+            const newActiveSlide = slides[currentSlide];
+            const newTabButtons = newActiveSlide.querySelectorAll(".slide-tabs .tab-btn");
+            if (newTabButtons.length > 0) {
+                newTabButtons[newTabButtons.length - 1].click();
+            }
         }
     };
 
